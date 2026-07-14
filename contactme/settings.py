@@ -78,8 +78,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'contactme.wsgi.application'
-DEFAULT_FROM_EMAIL = "bohorquezjuanfer@gmail.com"
-NOTIFY_EMAIL= "bohorquezjuanfer@gmail.com"
+DEFAULT_FROM_EMAIL = "youreailhere"
+NOTIFY_EMAIL= "youreailhere"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.mailgun.org"  # new
 EMAIL_HOST_USER = os.getenv("MAILGUN_SMTP_LOGIN")  # new
