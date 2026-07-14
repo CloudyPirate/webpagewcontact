@@ -1,0 +1,151 @@
+{% load static %}
+{%load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Lead</title>
+    <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">ProgramLead</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about-us">About</a></li>
+        </ul>
+        <a href="/admin" class="nav-btn">Program Admin Portal</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content" >
+            <h1>Program Management Solutions</h1>
+            <p>A small but robust platform for grass-root program development. Let us handle the organization while you focus on what matters most.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn-primary">Start Now</a>
+                <a href="#features" class="btn-secondary">Schedule Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Everything you need to organize, manage and scale</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">&#x26C1</div>
+                <h3>Database Management</h3>
+                <p>Our database handles all the programs, coaches, uniforms, and player tables needed to organize your programs.
+                And if you have other requirements outside of sports, we can handle that too!</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128193</div>
+                <h3>Report Downloading</h3>
+                <p>Exporting the information about your program is simple; with just a click you get CSV and XSXL support!</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128194</div>
+                <h3>Waiver Management</h3>
+                <p>Upload documents necessary for different programs, added seamlessly to the players table entry.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🚀</div>
+                <h3>Program Management</h3>
+                <p>Filtering and searching for program participants made simple with exports and custom views.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128231;</div>
+                <h3>Program Newsletter</h3>
+                <p>Manage the communication, updates and fundraising events through the newsletter service included!</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💡</div>
+                <h3>Program Blog</h3>
+                <p>Using our simple and clean UI, keeping everyone up to date on your program is easy!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Simple, transparent pricing</h2>
+        <p class="section-subtitle">Choose a monthly plan option. Or schedule a call for a yearly rate with customizable workflows!</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="price-header">
+                    <h3>Program Organization</h3>
+                    <h2>$10</h2>
+                    <span>/ month</span>
+                </div>
+                <ul class="features-list">
+                    <li>Installation and Set-up</li>
+                    <li>Database Configuration & Domain Configuration</li>
+                    <li>Basic Support</li>
+                </ul>
+                <a href="https://buy.stripe.com/test_5kQ6oJ4zi3oX14Xf3G9R600" class="btn-price">Organize</a>
+            </div>
+
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="price-header">
+                    <h3>Presence</h3>
+                    <h2>$35</h2>
+                    <span>/ month</span>
+                </div>
+                <ul class="features-list">
+                    <li>Installation and Set-up</li>
+                    <li>Blog support and Database support</li>
+                    <li>Priority 24/7 Support</li>
+                </ul>
+                <a href="https://buy.stripe.com/test_bJebJ3e9Se3B14X2gU9R601" class="btn-price active">Presence </a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="price-header">
+                    <h3>Scaling</h3>
+                    <h2>$50</h2>
+                    <span>/ month</span>
+                </div>
+                <ul class="features-list">
+                    <li>Blog, Database and Newsletter support</li>
+                    <li>Dedicated 24/7 Support</li>
+                    <li>Dedicated Account Manager</li>
+                </ul>
+                <a href="https://buy.stripe.com/test_8x2dRbaXGe3BdRJ6xa9R602" class="btn-price">Scale</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="pricing">
+        <h2 class="section-title">Who am I?</h2>
+        <p class="section-subtitle">Contact me for more information!</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card popular">
+                <div class="popular-badge">Meet me!</div>
+                <div class="price-header">
+                    <h3>Juan Fernando Bohorquez</h3>
+                    <img src="../static/css/images/headshotexample.png" alt="headshot" width="150" , height="150">
+                </div>
+               <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                    <div class="form-actions">
+                        <div class = "hero-buttons">
+                            <button type = "submit" class="btn-primary">Send</button>
+                        </div>
+                    </div>
+
+            </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
